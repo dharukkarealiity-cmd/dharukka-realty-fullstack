@@ -4,12 +4,10 @@ import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
@@ -18,17 +16,27 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <Link to="/" className="logo-container">
+      <Link to="/" className="logo-container" onClick={() => setOpen(false)}>
         <img src="/logo.png" alt="Dharukka Realty" />
       </Link>
 
-      <div className="menu-icon">☰</div>
+      <button className="menu-icon" onClick={() => setOpen(!open)}>
+        {open ? "×" : "☰"}
+      </button>
 
-      <div className="nav-links">
-        <NavLink to="/" end>Home</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+      <div className={`nav-links ${open ? "show" : ""}`}>
+        <NavLink to="/" end onClick={() => setOpen(false)}>Home</NavLink>
+        <NavLink to="/projects" onClick={() => setOpen(false)}>Projects</NavLink>
+        <NavLink to="/about" onClick={() => setOpen(false)}>About</NavLink>
+        <NavLink to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
+
+        <NavLink
+          to="/schedule-visit"
+          className="mobile-visit-btn"
+          onClick={() => setOpen(false)}
+        >
+          Schedule a Visit
+        </NavLink>
       </div>
 
       <NavLink to="/schedule-visit" className="visit-btn">
