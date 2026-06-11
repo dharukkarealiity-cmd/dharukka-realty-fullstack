@@ -32,8 +32,7 @@ function Footer() {
           <Link to="/projects">All Projects</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-          <Link to="/contact">Careers</Link>
-          <Link to="/contact">Press</Link>
+          
         </div>
 
         <div className="footer-contact">
