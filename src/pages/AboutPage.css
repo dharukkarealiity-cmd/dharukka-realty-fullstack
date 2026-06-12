@@ -1,345 +1,332 @@
 .about-page {
-  background: #fff;
+  background: #f8f8f6;
   padding-top: 82px;
-  overflow: hidden;
 }
 
+/* =========================
+   INTRO
+========================= */
+
+.about-intro {
+  max-width: 1300px;
+  margin: auto;
+  padding: 90px 7% 25px;
+}
 .about-label {
-  color: #d71920;
+  color: #c69c6d;
+  font-size: 12px;
   letter-spacing: 5px;
-  font-size: 11px;
-  font-weight: 800;
-  margin-bottom: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
-/* TOP */
-.about-top {
-  padding: 120px 8% 90px;
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 80px;
-  align-items: end;
-  background: #faf8f4;
-}
-
-.about-top h1 {
+.about-intro h1 {
   font-family: Georgia, serif;
-  font-size: clamp(48px, 6vw, 88px);
-  line-height: 1.02;
+  font-size: 72px;
+  line-height: 1.08;
   font-weight: 400;
-  max-width: 960px;
   color: #111;
+  margin-bottom: 25px;
 }
 
-.about-top p {
+.about-intro h1 span {
+  color: #c69c6d;
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: #c69c6d;
+  margin-bottom: 30px;
+}
+
+.about-desc {
   max-width: 620px;
   color: #666;
+  font-size: 18px;
   line-height: 1.9;
-  margin-top: 28px;
-  font-size: 16px;
 }
 
-.about-top-card {
-  background: #101116;
-  color: #fff;
-  padding: 50px 45px;
-  min-height: 300px;
-}
+/* =========================
+   STATS CARD
+========================= */
 
-.about-top-card span {
-  color: #c69c6d;
-  letter-spacing: 5px;
-  font-size: 11px;
-}
-
-.about-top-card h2 {
-  font-family: Georgia, serif;
-  font-size: 78px;
-  font-weight: 400;
-  margin: 20px 0;
-}
-
-.about-top-card p {
-  color: rgba(255,255,255,0.65);
-  margin: 0;
-}
-
-/* PROFILE */
-.about-profile {
-  padding: 120px 8%;
+.about-stats {
+  margin-top: 70px;
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
   display: grid;
-  grid-template-columns: 0.9fr 1fr;
-  gap: 85px;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+}
+
+.about-stats div {
+  border-right: 1px solid #ececec;
+  padding: 0 30px;
+}
+
+.about-stats div:last-child {
+  border-right: none;
+}
+
+.about-stats h3 {
+  font-family: Georgia, serif;
+  font-size: 54px;
+  font-weight: 400;
+  color: #c69c6d;
+  margin-bottom: 10px;
+}
+
+.about-stats p {
+  color: #444;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+/* =========================
+   TRUST SECTION
+========================= */
+
+.trust-showcase {
+  max-width: 1300px;
+  margin: 30px auto 90px;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 35px;
   align-items: center;
 }
 
-.profile-image {
-  height: 620px;
+.trust-image-box {
+  position: relative;
+  height: 540px;
   overflow: hidden;
-  box-shadow: 0 35px 90px rgba(0,0,0,0.14);
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
 }
 
-.profile-image img {
+.trust-image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.profile-content h2,
-.about-values h2,
-.about-journey h2,
-.about-cta h2 {
+.trust-floating-box {
+  position: absolute;
+  left: 35px;
+  bottom: 35px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 28px 35px;
+  border-left: 4px solid #c69c6d;
+}
+
+.trust-floating-box h3 {
   font-family: Georgia, serif;
-  font-size: 54px;
-  line-height: 1.12;
+  font-size: 42px;
   font-weight: 400;
-  color: #111;
+  color: #c69c6d;
 }
 
-.profile-content > p {
-  color: #666;
-  line-height: 1.9;
-  font-size: 16px;
-  margin: 28px 0 42px;
-  max-width: 640px;
-}
-
-.profile-points {
-  display: grid;
-  gap: 18px;
-}
-
-.profile-points div {
-  display: grid;
-  grid-template-columns: 70px 1fr;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 18px;
-}
-
-.profile-points h3 {
-  font-family: Georgia, serif;
-  color: #d71920;
-  font-size: 32px;
-  font-weight: 400;
-}
-
-.profile-points p {
+.trust-floating-box p {
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
 }
 
-/* STATS */
-.about-stats {
-  margin: 0 8%;
-  background: #101116;
-  color: #fff;
-  padding: 55px 65px;
+.trust-content-box {
+  background: #fff;
+  padding: 45px 42px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+.trust-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 45px 1fr;
+  gap: 22px;
+  padding: 22px 0;
+  border-bottom: 1px solid #eee;
 }
 
-.about-stats div {
-  border-left: 1px solid rgba(255,255,255,0.16);
-  padding-left: 35px;
+.trust-row:last-child {
+  border-bottom: none;
 }
 
-.about-stats div:first-child {
-  border-left: none;
-  padding-left: 0;
-}
-
-.about-stats h3 {
+.trust-row span {
   font-family: Georgia, serif;
-  font-size: 50px;
-  font-weight: 400;
+  font-size: 28px;
+  color: #c69c6d;
 }
 
-.about-stats p {
-  color: rgba(255,255,255,0.58);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 10px;
-  margin-top: 12px;
-}
-
-/* VALUES */
-.about-values {
-  padding: 120px 8%;
-  background: #fff;
-}
-
-.about-values h2 {
-  margin-bottom: 55px;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-}
-
-.values-grid div {
-  padding: 48px 40px;
-  border: 1px solid #eee;
-  background: #fff;
-  transition: 0.35s ease;
-}
-
-.values-grid div:hover,
-.journey-grid div:hover {
-  transform: translateY(-8px);
-  border-color: #c69c6d;
-  box-shadow: 0 25px 65px rgba(0,0,0,0.08);
-}
-
-.values-grid span {
-  color: #d71920;
-  letter-spacing: 4px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.values-grid h3 {
-  font-family: Georgia, serif;
-  font-size: 34px;
-  font-weight: 400;
-  margin: 28px 0 16px;
-}
-
-.values-grid p {
-  color: #666;
-  line-height: 1.8;
-}
-
-/* JOURNEY */
-.about-journey {
-  padding: 115px 8%;
-  background: #faf8f4;
-}
-
-.about-journey h2 {
-  margin-bottom: 55px;
-}
-
-.journey-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.journey-grid div {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 42px 32px;
-  transition: 0.35s ease;
-}
-
-.journey-grid span {
-  font-family: Georgia, serif;
-  color: #d71920;
-  font-size: 34px;
-}
-
-.journey-grid h3 {
-  font-family: Georgia, serif;
-  font-size: 23px;
-  font-weight: 400;
-  margin-top: 18px;
-}
-
-/* QUOTE */
-.about-quote {
-  padding: 105px 13%;
-  background: #101116;
-  color: #fff;
-}
-
-.about-quote h2 {
-  font-family: Georgia, serif;
-  font-size: 38px;
-  line-height: 1.45;
-  font-weight: 400;
-  max-width: 1050px;
-}
-
-.about-quote p {
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 4px;
-  font-size: 11px;
-  margin-top: 30px;
-}
-
-/* CTA */
-.about-cta {
-  padding: 90px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  background: #fff;
-}
-
-.about-cta h2 {
-  font-size: 50px;
-}
-
-.about-cta a {
-  text-decoration: none;
+.trust-row h3 {
+  font-size: 24px;
   color: #111;
-  border: 1px solid #c69c6d;
-  padding: 16px 34px;
-  letter-spacing: 2px;
-  font-size: 12px;
-  transition: 0.3s ease;
+  margin-bottom: 8px;
 }
 
-.about-cta a:hover {
-  background: #c69c6d;
-  color: #fff;
+.trust-row p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .about-top,
-  .about-profile,
-  .about-stats,
-  .values-grid,
-  .journey-grid {
+@media (max-width: 900px) {
+  .trust-showcase {
     grid-template-columns: 1fr;
   }
 
-  .about-top,
-  .about-profile,
-  .about-values,
-  .about-journey {
-    padding: 70px 6%;
-  }
-
-  .profile-image {
+  .trust-image-box {
     height: 420px;
   }
 
+  .trust-content-box {
+    padding: 35px;
+  }
+}
+/* =========================
+   JOURNEY
+========================= */
+
+.journey-card {
+  max-width: 1400px;
+  margin: 90px auto;
+  background: white;
+  border-radius: 24px;
+  padding: 70px;
+  display: grid;
+  grid-template-columns: 350px repeat(4, 1fr);
+  gap: 35px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.journey-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #111;
+}
+
+.journey-item {
+  position: relative;
+}
+
+.journey-item::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #c69c6d;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.journey-year {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  color: #c69c6d;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.journey-item h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.journey-item p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.about-visit {
+  max-width: 1400px;
+  margin: 0 auto 100px;
+  background: linear-gradient(
+    135deg,
+    #f8f3eb,
+    #ffffff
+  );
+  border-radius: 24px;
+  padding: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-visit h2 {
+  font-family: Georgia, serif;
+  font-size: 54px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.about-visit p {
+  color: #666;
+  font-size: 17px;
+}
+
+.about-visit a {
+  background: #c69c6d;
+  color: white;
+  text-decoration: none;
+  padding: 20px 42px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.about-visit a:hover {
+  background: #b48757;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .about-intro h1 {
+    font-size: 46px;
+  }
+
   .about-stats {
-    margin: 0;
-    padding: 45px 6%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   .about-stats div {
-    border-left: none;
-    border-bottom: 1px solid rgba(255,255,255,0.16);
-    padding: 22px 0;
+    border: none;
   }
 
-  .profile-content h2,
-  .about-values h2,
-  .about-journey h2,
-  .about-cta h2 {
-    font-size: 40px;
+  .trust-card {
+    grid-template-columns: 1fr;
   }
 
-  .about-cta {
+  .trust-right img {
+    min-height: 400px;
+  }
+
+  .journey-card {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visit {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about-visit h2 {
+    font-size: 42px;
   }
 }

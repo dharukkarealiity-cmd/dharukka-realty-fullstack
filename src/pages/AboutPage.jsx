@@ -1,120 +1,128 @@
 import "./AboutPage.css";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function AboutPage() {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 35 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-  };
+  const stats = [
+    ["26+", "YEARS OF EXPERIENCE"],
+    ["42+", "PROJECTS DELIVERED"],
+    ["12,000+", "FAMILIES SERVED"],
+    ["18 Mn+", "SQ. FT. DELIVERED"],
+  ];
+
+  const trustItems = [
+    {
+      icon: "⌂",
+      title: "Quality Construction",
+      desc: "Built with the best materials and modern construction practices.",
+    },
+    {
+      icon: "□",
+      title: "Transparent Process",
+      desc: "Clear communication at every step keeps you informed and confident.",
+    },
+    {
+      icon: "⌖",
+      title: "Prime Locations",
+      desc: "Carefully selected locations for better connectivity and value.",
+    },
+    {
+      icon: "◷",
+      title: "Timely Delivery",
+      desc: "We respect your time and deliver what we promise, always.",
+    },
+  ];
+
+  const journey = [
+    ["1998", "Founded in Gujarat", "With a vision to create quality homes and lasting relationships."],
+    ["2006", "First Premium Project", "Delivered our first premium residence with commitment to excellence."],
+    ["2014", "Expanding Horizons", "Expanded across Gujarat with more projects and thousands of happy families."],
+    ["2024", "The Next Chapter", "Continuing to build better communities for generations."],
+  ];
 
   return (
     <main className="about-page">
-      <section className="about-top">
-        <motion.div initial="hidden" animate="show" variants={fadeUp}>
-          <p className="about-label">ABOUT DHARUKKA REALTY</p>
-          <h1>We build homes with trust, quality and timeless design.</h1>
-          <p>
-            Dharukka Realty creates premium residential spaces with practical
-            planning, strong construction and a customer-first approach.
-          </p>
-        </motion.div>
+      <section className="about-intro">
+        <p className="about-label">OUR STORY</p>
 
-        <div className="about-top-card">
-          <span>Since</span>
-          <h2>1998</h2>
-          <p>Delivering premium real estate excellence across Gujarat.</p>
-        </div>
-      </section>
+        <h1>
+          26 Years of Building <br />
+          Homes <span>Gujarat Trusts.</span>
+        </h1>
 
-      <section className="about-profile">
-        <div className="profile-image">
-          <img src="/about.jpg" alt="Dharukka Realty" />
-        </div>
+        <div className="gold-line"></div>
 
-        <div className="profile-content">
-          <p className="about-label">OUR STORY</p>
-          <h2>Built for families. Designed for generations.</h2>
-          <p>
-            We believe a home should feel beautiful, comfortable and secure.
-            Every project is planned with attention to space, lifestyle,
-            natural light and long-term value.
-          </p>
+        <p className="about-desc">
+          Dharukka Realty has been creating premium living spaces that combine
+          quality construction, thoughtful design and long-term value. Homes
+          that families are proud to own and pass on.
+        </p>
 
-          <div className="profile-points">
-            <div>
-              <h3>01</h3>
-              <p>Premium construction quality</p>
+        <div className="about-stats">
+          {stats.map((item, index) => (
+            <div key={index}>
+              <h3>{item[0]}</h3>
+              <p>{item[1]}</p>
             </div>
-            <div>
-              <h3>02</h3>
-              <p>Transparent customer guidance</p>
-            </div>
-            <div>
-              <h3>03</h3>
-              <p>Modern lifestyle planning</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      <section className="about-stats">
-        <div><h3>26+</h3><p>Years Experience</p></div>
-        <div><h3>42+</h3><p>Projects Delivered</p></div>
-        <div><h3>12K+</h3><p>Happy Families</p></div>
-        <div><h3>18Mn</h3><p>Sq. Ft. Delivered</p></div>
-      </section>
+      <section className="trust-showcase">
+  <div className="trust-image-box">
+    <img src="/about.jpg" alt="Dharukka Realty" />
 
-      <section className="about-values">
-        <p className="about-label">OUR VALUES</p>
-        <h2>What defines our work</h2>
+    <div className="trust-floating-box">
+      <h3>26+</h3>
+      <p>Years of trusted construction</p>
+    </div>
+  </div>
 
-        <div className="values-grid">
-          <div>
-            <span>01</span>
-            <h3>Trust</h3>
-            <p>Honest communication and clear process from start to finish.</p>
-          </div>
-          <div>
-            <span>02</span>
-            <h3>Quality</h3>
-            <p>Strong materials, reliable engineering and lasting construction.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <h3>Design</h3>
-            <p>Elegant spaces planned for comfort, privacy and daily life.</p>
-          </div>
-        </div>
-      </section>
+  <div className="trust-content-box">
+    <p className="about-label">WHY FAMILIES TRUST US</p>
 
-      <section className="about-journey">
-        <p className="about-label">OUR JOURNEY</p>
-        <h2>A timeline of steady growth</h2>
+    {trustItems.map((item, index) => (
+      <div className="trust-row" key={index}>
+        <span>0{index + 1}</span>
 
-        <div className="journey-grid">
-          <div><span>1998</span><h3>Founded in Gujarat</h3></div>
-          <div><span>2006</span><h3>First premium residence</h3></div>
-          <div><span>2014</span><h3>Expanded across Gujarat</h3></div>
-          <div><span>2024</span><h3>Future-ready communities</h3></div>
-        </div>
-      </section>
-
-      <section className="about-quote">
-        <h2>
-          “We do not just build homes. We create spaces where families grow,
-          memories are made and value continues for generations.”
-        </h2>
-        <p>DHARUKKA REALTY / LEADERSHIP</p>
-      </section>
-
-      <section className="about-cta">
         <div>
-          <p className="about-label">GET STARTED</p>
-          <h2>Let’s build your dream home.</h2>
+          <h3>{item.title}</h3>
+          <p>{item.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+      <section className="journey-card">
+        <div className="journey-heading">
+          <p className="about-label">OUR JOURNEY</p>
+          <h2>
+            A Journey of <br />
+            Growth & Trust.
+          </h2>
         </div>
 
-        <Link to="/schedule-visit">SCHEDULE A VISIT</Link>
+        {journey.map((item, index) => (
+          <div className="journey-item" key={index}>
+            <span className="journey-year">{item[0]}</span>
+            <h4>{item[1]}</h4>
+            <p>{item[2]}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="about-visit">
+        <div>
+          <h2>
+            Ready to visit <br />
+            Rameshvar Bungalow?
+          </h2>
+          <p>
+            Experience the craftsmanship, quality and attention to detail in
+            person.
+          </p>
+        </div>
+
+        <Link to="/schedule-visit">SCHEDULE A VISIT →</Link>
       </section>
     </main>
   );
