@@ -7,10 +7,11 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "https://dharukka-realty-fullstack.vercel.app"
-  ],
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "https://dharukka-realty-fullstack.vercel.app",
+  "https://dharukka-realty-fullstack-six.vercel.app"
+],
   methods: ["GET", "POST"],
   credentials: true
 }));
