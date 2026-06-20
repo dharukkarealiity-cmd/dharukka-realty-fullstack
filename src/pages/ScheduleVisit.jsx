@@ -22,7 +22,7 @@ function ScheduleVisit() {
 
     try {
      const res = await fetch(
-  "https://dharukka-realty-fullstack.onrender.com/api/visit",
+  "https://dharukka-realty-fullstack-oh3s.onrender.com/api/visit",
   {
     method: "POST",
     headers: {
