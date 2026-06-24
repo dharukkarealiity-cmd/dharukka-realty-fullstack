@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./ProjectsPage.css";
 
-const API_URL = "http://localhost:5001/api/projects";
+const API_URL = "https://dharukka-realty-fullstack-oh3s.onrender.com/api/projects";
 
 // Builds a short checklist for a project card from real fields —
 // only includes a line if the underlying data actually exists,

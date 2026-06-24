@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ProjectDetails.css";
 
-const API_URL = "http://localhost:5001/api/projects";
+const API_URL = "https://dharukka-realty-fullstack-oh3s.onrender.com/api/projects";
 
 function ProjectDetails() {
   const { id } = useParams();

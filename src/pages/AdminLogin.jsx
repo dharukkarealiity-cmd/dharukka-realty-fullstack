@@ -30,7 +30,7 @@ function AdminLogin() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5001/api/admin/login",
+        "https://dharukka-realty-fullstack-oh3s.onrender.com/api/admin/login",
         { email, password }
       );
 

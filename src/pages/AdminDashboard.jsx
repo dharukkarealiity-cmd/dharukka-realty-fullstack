@@ -12,7 +12,7 @@ function AdminDashboard() {
     const fetchStats = async () => {
       try {
         const [p, l, i] = await Promise.all([
-          fetch(`http://localhost:5001/api/projects`).then(r => r.json()),
+          fetch(`https://dharukka-realty-fullstack-oh3s.onrender.com/api/projects`).then(r => r.json()),
           fetch(`${BASE}/api/visits`).then(r => r.json()),
           fetch(`${BASE}/api/contacts`).then(r => r.json()),
         ]);

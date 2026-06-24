@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./AdminProjects.css";
 
-const API_URL = "http://localhost:5001/api/projects";
+const API_URL = "https://dharukka-realty-fullstack-oh3s.onrender.com/api/projects";
 const CLOUD_NAME = "dox2zkbxi";
 const UPLOAD_PRESET = "ml_default";
 
