@@ -39,7 +39,7 @@ function Footer() {
           <p>GET IN TOUCH</p>
           <span>⌖ Dharukka House,bhavnagar , gujrat</span>
           <span>☎ +91 2261004000</span>
-          <span>✉ info@dharukkareality.com</span>
+          <span>✉ dharukkarealiity@gmail.com</span>
         </div>
       </div>
 

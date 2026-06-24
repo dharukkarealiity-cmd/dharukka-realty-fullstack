@@ -64,10 +64,16 @@
   background: #d71920;
 }
 
+/* Schedule a Visit — bolder pill outline, fills red on hover.
+   Border thickened from 1px to 2px and corners rounded into a pill
+   so it reads as a deliberate primary action, not a plain rectangle.
+   Hover ties it to the same red used for active nav links, linking
+   the CTA color back to the rest of the navbar's accent system. */
 .visit-btn {
   justify-self: end;
-  border: 1px solid #d9a11a;
-  padding: 14px 30px;
+  border: 2px solid #d9a11a;
+  border-radius: 999px;
+  padding: 12px 28px;
   text-decoration: none;
   color: #111;
   font-size: 15px;
@@ -137,9 +143,19 @@
     display: none;
   }
 
+  /* Mobile menu's Schedule a Visit gets the same pill treatment
+     for consistency with the desktop version */
   .mobile-visit-btn {
     display: block;
-    border: 1px solid #d9a11a;
-    padding: 13px 28px;
+    border: 2px solid #d9a11a;
+    border-radius: 999px;
+    padding: 12px 28px;
+    transition: 0.3s;
+  }
+
+  .mobile-visit-btn:hover {
+    background: #d71920;
+    border-color: #d71920;
+    color: white;
   }
 }

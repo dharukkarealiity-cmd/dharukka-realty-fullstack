@@ -1,92 +1,143 @@
 .why-section {
-  padding: 120px 7%;
-  background: #f4f5f8;
-  display: grid;
-  grid-template-columns: 0.9fr 1.4fr;
-  gap: 50px;
-  align-items: start;
+  padding: 90px 7%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
 }
 
 .why-label {
   color: #d71920;
-  letter-spacing: 7px;
-  font-size: 13px;
+  letter-spacing: 6px;
+  font-size: 11px;
   font-weight: 700;
-  margin-bottom: 24px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
 }
 
-.why-left h2 {
+.why-headline {
   font-family: Georgia, serif;
-  font-size: 38px;
-  line-height: 1.2;
-  max-width: 500px;
-  font-weight: 400;
-  color: #111;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.why-card {
-  background: #fff;
-  padding: 36px 34px;
-  min-height: 150px;
-    padding: 30px;
-  border: 1px solid #e6e6e6;
-  transition: all 0.4s ease;
-}
-
-.why-card:hover {
-  border-color: #d9a11a;
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-
-}
-
-.reason-card.active{
-  background:#fffdf8;
-  border:1px solid #c69c6d;
-}
-
-.why-card span {
-  display: block;
-  color: #d9a11a;
-  font-size: 13px;
-  letter-spacing: 3px;
-  margin-bottom: 22px;
+  font-size: 48px;
   font-weight: 700;
+  line-height: 1.15;
+  color: #111111;
+  margin: 0;
+}
+
+/* Scroll track */
+.why-scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.why-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 4px 12px;
+}
+
+.why-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.why-card {
+  flex: 0 0 280px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-color: #d71920;
+}
+
+.why-card:hover .why-bar {
+  background: #d9a11a;
+}
+
+.why-card-top {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-bar {
+  width: 28px;
+  height: 2px;
+  background: #444;
+  border-radius: 2px;
+  transition: background 0.25s;
+  margin-top: 4px;
 }
 
 .why-card h3 {
   font-family: Georgia, serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #111;
-  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+  line-height: 1.3;
 }
 
 .why-card p {
-  color: #666;
   font-size: 14px;
+  color: #666666;
   line-height: 1.7;
+  margin: 0;
 }
 
-@media (max-width: 992px) {
-  .why-section {
-    grid-template-columns: 1fr;
-    padding: 90px 7%;
-  }
-
-  .why-left h2 {
-    font-size: 38px;
-  }
+/* Fade edges */
+.why-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+  z-index: 2;
 }
 
-@media (max-width: 650px) {
-  .why-grid {
-    grid-template-columns: 1fr;
+.why-fade--left {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.why-fade--right {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-headline {
+    font-size: 32px;
+  }
+
+  .why-card {
+    flex: 0 0 240px;
+    padding: 24px 20px;
   }
 }
