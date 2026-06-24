@@ -1,0 +1,253 @@
+:root {
+  --admin-bg: #f6f7f9;
+  --admin-surface: #ffffff;
+  --admin-border: #e2e5eb;
+  --admin-text: #1c2333;
+  --admin-text-muted: #6b7280;
+  --admin-primary: #2f5fdb;
+  --admin-primary-hover: #2349ad;
+  --admin-danger: #d64545;
+  --admin-danger-hover: #b53636;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+/* ===== LOGIN PAGE ===== */
+
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--admin-bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+}
+
+.admin-login-card {
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(16, 24, 40, 0.06);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.admin-login-brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--admin-primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.admin-login-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--admin-text);
+  margin: 0 0 6px;
+}
+
+.admin-login-subtitle {
+  font-size: 14px;
+  color: var(--admin-text-muted);
+  margin: 0 0 28px;
+}
+
+.admin-login-field {
+  margin-bottom: 16px;
+}
+
+.admin-login-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--admin-text);
+  margin-bottom: 6px;
+}
+
+.admin-login-input {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--admin-text);
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.admin-login-input:focus {
+  outline: none;
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 3px rgba(47, 95, 219, 0.12);
+}
+
+.admin-login-error {
+  background: #fdf0f0;
+  border: 1px solid #f1d4d4;
+  color: var(--admin-danger);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.admin-login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--admin-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  margin-top: 8px;
+}
+
+.admin-login-button:hover {
+  background: var(--admin-primary-hover);
+}
+
+.admin-login-button:disabled {
+  background: #b9c4e0;
+  cursor: not-allowed;
+}
+
+/* ===== DASHBOARD ===== */
+
+.admin-dashboard-page {
+  min-height: 100vh;
+  background: var(--admin-bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.admin-dashboard-topbar {
+  background: var(--admin-surface);
+  border-bottom: 1px solid var(--admin-border);
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-dashboard-brand {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--admin-text);
+}
+
+.admin-dashboard-brand span {
+  color: var(--admin-primary);
+}
+
+.admin-logout-btn {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--admin-text-muted);
+  background: transparent;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.admin-logout-btn:hover {
+  background: #fdf0f0;
+  color: var(--admin-danger);
+  border-color: #f1d4d4;
+}
+
+.admin-dashboard-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.admin-dashboard-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--admin-text);
+  margin: 0 0 6px;
+}
+
+.admin-dashboard-subtitle {
+  font-size: 14px;
+  color: var(--admin-text-muted);
+  margin: 0 0 36px;
+}
+
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.admin-dashboard-card {
+  display: block;
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-left: 3px solid var(--admin-primary);
+  border-radius: var(--radius-md);
+  padding: 22px 22px 20px;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.admin-dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.08);
+}
+
+.admin-dashboard-card-icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.admin-dashboard-card-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--admin-primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.admin-dashboard-card-count span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--admin-text-muted);
+}
+
+.admin-dashboard-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--admin-text);
+  margin: 0 0 4px;
+}
+
+.admin-dashboard-card p {
+  font-size: 13px;
+  color: var(--admin-text-muted);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard-topbar {
+    padding: 16px 20px;
+  }
+
+  .admin-dashboard-content {
+    padding: 32px 16px;
+  }
+}

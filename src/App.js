@@ -6,6 +6,12 @@ import {
 } from "react-router-dom";
 
 import { useEffect } from "react";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminProjects from "./pages/AdminProjects";
+import AdminLeads from "./pages/AdminLeads";
+import AdminInquiries from "./pages/AdminInquiries";
+import ProtectedRoute from "./components/ProtectedRoute"; // NEW
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -30,22 +36,67 @@ function ScrollToTop() {
 function Layout() {
   const location = useLocation();
 
+  const isAdminRoute =
+    location.pathname.startsWith("/admin");
+
   return (
     <>
       <ScrollToTop />
 
-      <Navbar />
+      {!isAdminRoute && <Navbar />}
 
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/project/:id" element={<ProjectDetails />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/schedule-visit" element={<ScheduleVisit />} />
+
+        {/* Admin Routes */}
+        {/* Login stays unprotected — you need to reach it to log in */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+
+        {/* Everything else under /admin now requires a valid token */}
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/projects"
+          element={
+            <ProtectedRoute>
+              <AdminProjects />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/leads"
+          element={
+            <ProtectedRoute>
+              <AdminLeads />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/inquiries"
+          element={
+            <ProtectedRoute>
+              <AdminInquiries />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
 
-      {location.pathname !== "/schedule-visit" && <Footer />}
+      {!isAdminRoute &&
+        location.pathname !== "/schedule-visit" && (
+          <Footer />
+      )}
     </>
   );
 }

@@ -1,0 +1,316 @@
+/* ===========================================
+   AdminProjects.css
+   Design intent: this is a working tool, not a
+   showcase page. Priorities: fast scanning,
+   clear section boundaries, obvious affordances.
+   =========================================== */
+
+:root {
+  --admin-bg: #f6f7f9;
+  --admin-surface: #ffffff;
+  --admin-border: #e2e5eb;
+  --admin-text: #1c2333;
+  --admin-text-muted: #6b7280;
+  --admin-primary: #2f5fdb;
+  --admin-primary-hover: #2349ad;
+  --admin-danger: #d64545;
+  --admin-danger-hover: #b53636;
+  --admin-success-bg: #eef6ec;
+  --admin-success-text: #2f6b32;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+.admin-projects-page {
+  background: var(--admin-bg);
+  min-height: 100vh;
+  padding: 32px 24px 80px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--admin-text);
+}
+
+.admin-projects-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.admin-page-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+
+/* ===== Form sections ===== */
+
+.admin-section {
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  border-left: 3px solid var(--admin-border);
+}
+
+/* Color-coded left accent so sections are scannable at a glance
+   without reading every label */
+.admin-section--basic    { border-left-color: #2f5fdb; }
+.admin-section--status   { border-left-color: #b6802f; }
+.admin-section--gallery  { border-left-color: #8a5fd6; }
+.admin-section--keyplan  { border-left-color: #2f8a72; }
+.admin-section--contacts { border-left-color: #d68a2f; }
+.admin-section--lists    { border-left-color: #5f8ad6; }
+
+.admin-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--admin-text-muted);
+  margin: 0 0 16px;
+}
+
+.admin-field {
+  margin-bottom: 14px;
+}
+
+.admin-field:last-child {
+  margin-bottom: 0;
+}
+
+.admin-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--admin-text);
+  margin-bottom: 4px;
+}
+
+.admin-hint {
+  font-size: 12px;
+  color: var(--admin-text-muted);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.admin-hint code {
+  background: #eef0f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.admin-input,
+.admin-textarea,
+.admin-select {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--admin-text);
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.admin-textarea {
+  resize: vertical;
+  min-height: 64px;
+  line-height: 1.5;
+}
+
+.admin-textarea--lg {
+  min-height: 90px;
+}
+
+.admin-input:focus,
+.admin-textarea:focus,
+.admin-select:focus {
+  outline: none;
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 3px rgba(47, 95, 219, 0.12);
+}
+
+.admin-select {
+  cursor: pointer;
+}
+
+/* ===== Buttons ===== */
+
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.admin-btn--primary {
+  background: var(--admin-primary);
+  color: #fff;
+}
+
+.admin-btn--primary:hover {
+  background: var(--admin-primary-hover);
+}
+
+.admin-btn--ghost {
+  background: transparent;
+  color: var(--admin-text-muted);
+  border-color: var(--admin-border);
+  margin-left: 10px;
+}
+
+.admin-btn--ghost:hover {
+  background: #f0f1f4;
+}
+
+.admin-btn--danger {
+  background: transparent;
+  color: var(--admin-danger);
+  border-color: #f1d4d4;
+  padding: 6px 14px;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.admin-btn--danger:hover {
+  background: #fdf0f0;
+  border-color: var(--admin-danger);
+}
+
+.admin-btn--edit {
+  background: transparent;
+  color: var(--admin-primary);
+  border-color: #cdd9f7;
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.admin-btn--edit:hover {
+  background: #eef2fc;
+  border-color: var(--admin-primary);
+}
+
+.admin-form-actions {
+  margin: 8px 0 32px;
+}
+
+/* ===== Divider ===== */
+
+.admin-divider {
+  border: none;
+  border-top: 1px solid var(--admin-border);
+  margin: 32px 0 24px;
+}
+
+.admin-list-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.admin-empty-state {
+  color: var(--admin-text-muted);
+  font-size: 14px;
+  padding: 24px;
+  text-align: center;
+  background: var(--admin-surface);
+  border: 1px dashed var(--admin-border);
+  border-radius: var(--radius-md);
+}
+
+/* ===== Project cards ===== */
+
+.admin-project-card {
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.admin-project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.admin-project-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.admin-status-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.admin-status-pill--ongoing   { background: #eaf2ff; color: #2f5fdb; }
+.admin-status-pill--upcoming  { background: #fff3e0; color: #b6802f; }
+.admin-status-pill--completed { background: var(--admin-success-bg); color: var(--admin-success-text); }
+
+.admin-project-actions {
+  display: flex;
+  gap: 0;
+}
+
+.admin-project-meta {
+  font-size: 14px;
+  color: var(--admin-text);
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.admin-project-meta strong {
+  color: var(--admin-text-muted);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.admin-project-image {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-top: 10px;
+  border: 1px solid var(--admin-border);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 600px) {
+  .admin-projects-page {
+    padding: 20px 14px 60px;
+  }
+
+  .admin-section {
+    padding: 16px;
+  }
+
+  .admin-project-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

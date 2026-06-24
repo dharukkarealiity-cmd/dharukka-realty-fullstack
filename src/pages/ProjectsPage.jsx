@@ -1,48 +1,109 @@
-import "./ProjectsPage.css";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import "./ProjectsPage.css";
+
+const API_URL = "http://localhost:5001/api/projects";
+
+// Builds a short checklist for a project card from real fields —
+// only includes a line if the underlying data actually exists,
+// so we never show fake/generic claims about a project.
+function buildChecklist(project) {
+  const items = [];
+
+  if (project.typology) items.push(project.typology);
+  if (project.projectType) items.push(project.projectType);
+
+  if (project.amenities && project.amenities.length > 0) {
+    items.push(`${project.amenities.length} Amenities Included`);
+  }
+
+  if (project.location) items.push(`Located in ${project.location}`);
+
+  // Fallback so a card never shows an empty checklist
+  if (items.length === 0) {
+    items.push("Details Available on Request");
+  }
+
+  return items.slice(0, 4); // keep cards even, max 4 lines like the original
+}
 
 function ProjectsPage() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const res = await axios.get(API_URL);
+        setProjects(res.data);
+      } catch (err) {
+        console.log(err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <section className="projects-page">
       <div className="projects-header">
-        <p className="section-label">FEATURED PROJECT</p>
-
-        <h1>Rameshvar Bungalow</h1>
-
+        <p className="section-label">OUR PROJECTS</p>
+        <h1>Explore Our Developments</h1>
         <p className="projects-desc">
-          Premium 1, 2 & 3 BHK homes thoughtfully designed with
-          modern architecture, quality construction and family comfort.
+          Premium homes thoughtfully designed with modern architecture,
+          quality construction and family comfort.
         </p>
       </div>
 
-      <div className="single-project-card">
-        <div className="project-image">
-          <img src="/hero-luxury-villa.jpg" alt="Rameshvar Bungalow" />
-        </div>
+      {loading && <p className="projects-status">Loading projects…</p>}
 
-        <div className="project-content">
-          <span className="project-status">ONGOING</span>
+      {!loading && error && (
+        <p className="projects-status">
+          Couldn't load projects right now. Please try again shortly.
+        </p>
+      )}
 
-          <h2>Rameshvar Bungalow</h2>
+      {!loading && !error && projects.length === 0 && (
+        <p className="projects-status">No projects available yet.</p>
+      )}
 
-          <p>
-            Located in Akvada, Bhavnagar. A premium residential
-            project offering elegant homes with modern amenities,
-            spacious planning and trusted construction quality.
-          </p>
+      {!loading &&
+        !error &&
+        projects.map((project) => (
+          <div className="single-project-card" key={project._id}>
+            <div className="project-image">
+              <img
+                src={project.image || "/placeholder-project.jpg"}
+                alt={project.title}
+              />
+            </div>
 
-          <ul>
-            <li>✓ 1, 2 & 3 BHK Homes</li>
-            <li>✓ Modern Design</li>
-            <li>✓ Premium Amenities</li>
-            <li>✓ Prime Location</li>
-          </ul>
+            <div className="project-content">
+              <span className="project-status">
+                {(project.status || "ONGOING").toUpperCase()}
+              </span>
 
-          <Link to="/project/rameshvar" className="project-btn">
-            View Details →
-          </Link>
-        </div>
-      </div>
+              <h2>{project.title}</h2>
+
+              {project.description && <p>{project.description}</p>}
+
+              <ul>
+                {buildChecklist(project).map((item, i) => (
+                  <li key={i}>✓ {item}</li>
+                ))}
+              </ul>
+
+              <Link to={`/project/${project._id}`} className="project-btn">
+                View Details →
+              </Link>
+            </div>
+          </div>
+        ))}
     </section>
   );
 }

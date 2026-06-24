@@ -1,3 +1,5 @@
+const projectRoutes = require("./routes/projectRoutes");
+const adminRoutes = require("./routes/adminRoutes"); // NEW
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -5,18 +7,15 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors({
-  origin: [
-  "http://localhost:3000",
-  "http://localhost:3001",
-  "https://dharukka-realty-fullstack.vercel.app",
-  "https://dharukka-realty-fullstack-six.vercel.app"
-],
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+console.log("NEW SERVER VERSION RUNNING");
+
+// TEMPORARY CORS FIX
+app.use(cors());
 
 app.use(express.json());
+app.use("/api/projects", projectRoutes);
+app.use("/api/admin", adminRoutes); // NEW — this was missing, causing the 404
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
@@ -96,12 +95,6 @@ app.post("/api/visit", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
 app.get("/api/contacts", async (req, res) => {
   const contacts = await Contact.find().sort({ createdAt: -1 });
   res.json(contacts);
@@ -110,4 +103,10 @@ app.get("/api/contacts", async (req, res) => {
 app.get("/api/visits", async (req, res) => {
   const visits = await Visit.find().sort({ createdAt: -1 });
   res.json(visits);
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
