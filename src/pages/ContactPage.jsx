@@ -118,7 +118,7 @@ function ContactPage() {
               <option value="Residential Plot">Residential Plot</option>
               <option value="Property Visit">Property Visit</option>
               <option value="Investment">Investment</option>
-              <option value="Partnership">Partnership</option>
+              
             </select>
 
             <textarea
