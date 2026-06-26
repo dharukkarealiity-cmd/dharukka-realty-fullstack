@@ -95,16 +95,10 @@ function ScheduleVisit() {
             <option value="" disabled>
               Select Property
             </option>
-            <option value="Dharukka Premium Villas">
-              Dharukka Premium Villas
+            <option value="Rameshvar Bunglow">
+              Rameshvar Bunglow
             </option>
-            <option value="Dharukka Twin Residences">
-              Dharukka Twin Residences
-            </option>
-            <option value="Dharukka Luxury Homes">
-              Dharukka Luxury Homes
-            </option>
-          </select>
+            
 
           <textarea
             name="message"

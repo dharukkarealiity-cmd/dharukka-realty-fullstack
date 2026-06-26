@@ -38,7 +38,7 @@ function Footer() {
         <div className="footer-contact">
           <p>GET IN TOUCH</p>
           <span>⌖ Dharukka House,bhavnagar , gujrat</span>
-          <span>☎ +91 2261004000</span>
+          <span>☎ +91 7621901901</span>
           <span>✉ dharukkarealiity@gmail.com</span>
         </div>
       </div>
