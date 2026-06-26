@@ -63,8 +63,8 @@ function Hero() {
         >
 
           <div className="hero-tags">
-  <span>20+ Years Experience</span>
-  <span>500+ Happy Families</span>
+  <span>5+ Years Experience</span>
+  <span>250+ Happy Families</span>
   <span>10+ Premium Projects</span>
 </div>
          

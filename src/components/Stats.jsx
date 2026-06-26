@@ -33,13 +33,13 @@ function Stats() {
           </div>
 
           <div className="stat">
-            <h3>12000+</h3>
+            <h3>250+</h3>
             <div className="stat-line"></div>
             <p>Happy Families</p>
           </div>
 
           <div className="stat">
-            <h3>18Mn</h3>
+            <h3>105000 Sq ft</h3>
             <div className="stat-line"></div>
             <p>Sq Ft Delivered</p>
           </div>

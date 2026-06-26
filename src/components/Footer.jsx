@@ -1,29 +1,33 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+const BASE = "https://dharukka-realty-fullstack-oh3s.onrender.com";
 
 function Footer() {
+  const [address, setAddress] = useState("Loading...");
+
+  useEffect(() => {
+    fetch(`${BASE}/api/settings`)
+      .then((r) => r.json())
+      .then((data) => setAddress(data.address || ""))
+      .catch(() => setAddress(""));
+  }, []);
+
   return (
     <footer className="footer">
       <div className="footer-main">
         <div className="footer-brand">
-         <img className="footer-logo" src="/logo.png" alt="Dharukka Realty" />
-
+          <img className="footer-logo" src="/logo.png" alt="Dharukka Realty" />
           <h2>
             Building landmarks. <span>Creating</span>
             <br />
             <span>legacies.</span>
           </h2>
-
           <div className="footer-socials">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              ◎
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              in
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer">
-              ▻
-            </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">◎</a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">in</a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer">▻</a>
           </div>
         </div>
 
@@ -32,19 +36,18 @@ function Footer() {
           <Link to="/projects">All Projects</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-          
         </div>
 
         <div className="footer-contact">
           <p>GET IN TOUCH</p>
-          <span>⌖ Dharukka House,bhavnagar , gujrat</span>
+          <span>⌖ {address}</span>
           <span>☎ +91 7621901901</span>
           <span>✉ dharukkarealiity@gmail.com</span>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© 2026 Dharukka Realty. All rights reserved.</span>
+        <span>© 2026 Dharukka Realiity. All rights reserved.</span>
         <span>RERA Registered · Privacy · Terms</span>
       </div>
     </footer>
