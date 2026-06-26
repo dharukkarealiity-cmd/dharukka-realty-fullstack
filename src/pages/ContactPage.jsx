@@ -60,15 +60,15 @@ function ContactPage() {
             </div>
             <div>
               <h4>CALL</h4>
-              <p>Jaytibhai: +91 76219 01901<br />Timalbhai: +91 96626 49333</p>
+              <p>Jatinbhai: +91 76219 01901<br /></p>
             </div>
             <div>
               <h4>EMAIL</h4>
-              <p>info@dharukkareality.com</p>
+              <p>dharukkarealiity@gmail.com</p>
             </div>
             <div>
               <h4>HOURS</h4>
-              <p>Mon–Sat · 10:00 AM to 7:00 PM IST</p>
+              <p>Mon–sun · 9:30 AM to 6:30 PM IST</p>
             </div>
           </div>
         </div>

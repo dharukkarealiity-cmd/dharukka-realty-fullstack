@@ -17,7 +17,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="hero-small"
         >
-          DHARUKKA REALTY
+          DHARUKKA REALIITY
         </motion.p>
 
         <motion.h1

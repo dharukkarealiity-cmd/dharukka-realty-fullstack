@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function AboutPage() {
   const stats = [
-    ["26+", "YEARS OF EXPERIENCE"],
+    ["5+", "YEARS OF EXPERIENCE"],
     ["42+", "PROJECTS DELIVERED"],
-    ["12,000+", "FAMILIES SERVED"],
-    ["18 Mn+", "SQ. FT. DELIVERED"],
+    ["250+", "FAMILIES SERVED"],
+    ["105000 Sq ft+", "SQ. FT. DELIVERED"],
   ];
 
   const trustItems = [
@@ -52,7 +52,7 @@ function AboutPage() {
         <div className="gold-line"></div>
 
         <p className="about-desc">
-          Dharukka Realty has been creating premium living spaces that combine
+          Dharukka Realiity has been creating premium living spaces that combine
           quality construction, thoughtful design and long-term value. Homes
           that families are proud to own and pass on.
         </p>

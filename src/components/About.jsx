@@ -6,8 +6,8 @@ function About() {
       <div className="about-image">
         <img src="/about-realistic.jpg" alt="Dharukka Realty Design" />
         <div className="about-badge">
-          <h3>26+</h3>
-          <p>Years of Excellence</p>
+          <h3>5+</h3>
+          <p>Years of Experience</p>
         </div>
       </div>
 
@@ -21,32 +21,32 @@ function About() {
         </h2>
 
         <p className="about-desc">
-          Dharukka Realty creates premium residential spaces with thoughtful
+          Dharukka Realiity creates premium residential spaces with thoughtful
           planning, quality construction and timeless design. Every project is
           built with trust, detail and long-term value for families.
         </p>
 
-        <div className="about-cards">
-          <div>
-            <h4>Mission</h4>
-            <p>To build homes that enrich lifestyles and create lasting value.</p>
-          </div>
+       <div className="about-cards">
+  <div>
+    <h4>Legacy</h4>
+    <p>5+ years of building premium residential spaces families are proud to call home.</p>
+  </div>
 
-          <div>
-            <h4>Vision</h4>
-            <p>To become a trusted real estate developer known for quality.</p>
-          </div>
+  <div>
+    <h4>Location</h4>
+    <p>Prime plots in Bhavnagar's fastest growing and most peaceful neighbourhoods.</p>
+  </div>
 
-          <div>
-            <h4>Quality</h4>
-            <p>Every project is crafted with premium materials and care.</p>
-          </div>
+  <div>
+    <h4>Promise</h4>
+    <p>Honest pricing, on-time delivery and zero hidden costs — always.</p>
+  </div>
 
-          <div>
-            <h4>Trust</h4>
-            <p>Transparent work, timely delivery and strong relationships.</p>
-          </div>
-        </div>
+  <div>
+    <h4>Craftsmanship</h4>
+    <p>Every detail is built with premium materials and the highest standards of care.</p>
+  </div>
+</div>
       </div>
     </section>
   );

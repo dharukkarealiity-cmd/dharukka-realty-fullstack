@@ -92,24 +92,43 @@
 }
 
 .about-cards div {
-  border: 1px solid #eee;
+  border: 1px solid #f0e9e0;
   padding: 30px;
-  background: #fff;
-  min-height: 220px;
+  background: linear-gradient(135deg, #fff 80%, #fdf8f3 100%);
+  min-height: 160px;
   transition: 0.3s ease;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
 }
 
+.about-cards div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #c69c6d;
+  transition: width 0.4s ease;
+}
+
+.about-cards div:hover::after {
+  width: 100%;
+}
 .about-cards div:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(198, 156, 109, 0.15);
+  border-color: #c69c6d;
 }
 
 .about-cards h4 {
   font-family: Georgia, serif;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 400;
   color: #111;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .about-cards h4::before {
