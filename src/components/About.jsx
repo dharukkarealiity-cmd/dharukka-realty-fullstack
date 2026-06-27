@@ -4,7 +4,7 @@ function About() {
   return (
     <section className="about-section">
       <div className="about-image">
-        <img src="/about-realistic.jpg" alt="Dharukka Realty Design" />
+        <img src="/about-realistic.jpg" alt="Dharukka Realiity Design" />
         <div className="about-badge">
           <h3>5+</h3>
           <p>Years of Experience</p>

@@ -18,7 +18,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-main">
         <div className="footer-brand">
-          <img className="footer-logo" src="/logo.png" alt="Dharukka Realty" />
+          <img className="footer-logo" src="/logo.png" alt="Dharukka Realiity" />
           <h2>
             Building landmarks. <span>Creating</span>
             <br />

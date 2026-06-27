@@ -57,7 +57,7 @@ function AdminLogin() {
   return (
     <div className="admin-login-page">
       <div className="admin-login-card">
-        <p className="admin-login-brand">DHARUKKA REALTY</p>
+        <p className="admin-login-brand">DHARUKKA REALIITY</p>
         <h1 className="admin-login-title">Admin Login</h1>
         <p className="admin-login-subtitle">
           Sign in to manage projects, leads and inquiries.

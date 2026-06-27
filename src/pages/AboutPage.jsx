@@ -69,7 +69,7 @@ function AboutPage() {
 
       <section className="trust-showcase">
         <div className="trust-image-box">
-          <img src="/about.jpg" alt="Dharukka Realty" />
+          <img src="/about.jpg" alt="Dharukka Realiity" />
 
           <div className="trust-floating-box">
             <h3>5+</h3>

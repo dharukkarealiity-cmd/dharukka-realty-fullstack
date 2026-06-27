@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <Link to="/" className="logo-container" onClick={() => setOpen(false)}>
-        <img src="/logo.png" alt="Dharukka Realty" />
+        <img src="/logo.png" alt="Dharukka Realiity" />
       </Link>
 
       <button className="menu-icon" onClick={() => setOpen(!open)}>
