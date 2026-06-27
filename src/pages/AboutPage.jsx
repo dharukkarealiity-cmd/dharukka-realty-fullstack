@@ -33,10 +33,10 @@ function AboutPage() {
   ];
 
   const journey = [
-    ["1998", "Founded in Gujarat", "With a vision to create quality homes and lasting relationships."],
-    ["2006", "First Premium Project", "Delivered our first premium residence with commitment to excellence."],
-    ["2014", "Expanding Horizons", "Expanded across Gujarat with more projects and thousands of happy families."],
-    ["2024", "The Next Chapter", "Continuing to build better communities for generations."],
+    ["2019", "Founded in Bhavnagar", "With a vision to create quality homes and lasting relationships in Gujarat."],
+    ["2021", "First Premium Project", "Delivered our first premium residence with commitment to excellence."],
+    ["2023", "Growing Community", "More families served with better plots and modern residential spaces."],
+    ["2025", "The Next Chapter", "Continuing to build better communities for generations in Bhavnagar."],
   ];
 
   return (
@@ -45,7 +45,7 @@ function AboutPage() {
         <p className="about-label">OUR STORY</p>
 
         <h1>
-          26 Years of Building <br />
+          5 Years of Building <br />
           Homes <span>Gujarat Trusts.</span>
         </h1>
 
@@ -68,30 +68,31 @@ function AboutPage() {
       </section>
 
       <section className="trust-showcase">
-  <div className="trust-image-box">
-    <img src="/about.jpg" alt="Dharukka Realty" />
+        <div className="trust-image-box">
+          <img src="/about.jpg" alt="Dharukka Realty" />
 
-    <div className="trust-floating-box">
-      <h3>26+</h3>
-      <p>Years of trusted construction</p>
-    </div>
-  </div>
-
-  <div className="trust-content-box">
-    <p className="about-label">WHY FAMILIES TRUST US</p>
-
-    {trustItems.map((item, index) => (
-      <div className="trust-row" key={index}>
-        <span>0{index + 1}</span>
-
-        <div>
-          <h3>{item.title}</h3>
-          <p>{item.desc}</p>
+          <div className="trust-floating-box">
+            <h3>5+</h3>
+            <p>Years of trusted construction</p>
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+
+        <div className="trust-content-box">
+          <p className="about-label">WHY FAMILIES TRUST US</p>
+
+          {trustItems.map((item, index) => (
+            <div className="trust-row" key={index}>
+              <span>0{index + 1}</span>
+
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="journey-card">
         <div className="journey-heading">
           <p className="about-label">OUR JOURNEY</p>
@@ -114,7 +115,7 @@ function AboutPage() {
         <div>
           <h2>
             Ready to visit <br />
-            Rameshvar Bungalow?
+            Rameshwar Bungalow?
           </h2>
           <p>
             Experience the craftsmanship, quality and attention to detail in
