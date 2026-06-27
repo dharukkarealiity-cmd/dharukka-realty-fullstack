@@ -28,24 +28,25 @@ function About() {
 
        <div className="about-cards">
   <div>
-    <h4>Legacy</h4>
-    <p>5+ years of building premium residential spaces families are proud to call home.</p>
+    <h4>Mission</h4>
+    <p>To deliver premium residential spaces that families in Bhavnagar are proud to call home.</p>
   </div>
 
   <div>
-    <h4>Location</h4>
-    <p>Prime plots in Bhavnagar's fastest growing and most peaceful neighbourhoods.</p>
+    <h4>Vision</h4>
+    <p>To be Bhavnagar's most trusted real estate developer known for quality and transparency.</p>
   </div>
 
   <div>
-    <h4>Promise</h4>
+    <h4>Quality</h4>
+    <p>Every plot and bungalow is built with the finest materials and highest construction standards.</p>
+  </div>
+
+  <div>
+    <h4>Trust</h4>
     <p>Honest pricing, on-time delivery and zero hidden costs — always.</p>
   </div>
 
-  <div>
-    <h4>Craftsmanship</h4>
-    <p>Every detail is built with premium materials and the highest standards of care.</p>
-  </div>
 </div>
       </div>
     </section>
