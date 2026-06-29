@@ -12,6 +12,7 @@ import AdminProjects from "./pages/AdminProjects";
 import AdminLeads from "./pages/AdminLeads";
 import AdminInquiries from "./pages/AdminInquiries";
 import ProtectedRoute from "./components/ProtectedRoute"; // NEW
+import AdminGallery from "./pages/AdminGallery";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -88,6 +89,14 @@ function Layout() {
           element={
             <ProtectedRoute>
               <AdminInquiries />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/gallery"
+          element={
+            <ProtectedRoute>
+              <AdminGallery />
             </ProtectedRoute>
           }
         />

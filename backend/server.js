@@ -1,6 +1,7 @@
 const projectRoutes = require("./routes/projectRoutes");
 const settingsRoutes = require("./routes/settingsRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const galleryRoutes = require("./routes/galleryRoutes");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use("/api/projects", projectRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/settings", settingsRoutes);
+app.use("/api/gallery", galleryRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)

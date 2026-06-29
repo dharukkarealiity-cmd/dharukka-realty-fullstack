@@ -23,7 +23,7 @@ function Stats() {
           </div>
 
           <div className="stat">
-            <h3>26</h3>
+            <h3>5</h3>
             <div className="stat-line"></div>
             <p>Years of Experience</p>
           </div>

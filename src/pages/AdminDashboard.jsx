@@ -15,12 +15,13 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const [p, l, i] = await Promise.all([
-          fetch(`${BASE}/api/projects`).then(r => r.json()),
-          fetch(`${BASE}/api/visits`).then(r => r.json()),
-          fetch(`${BASE}/api/contacts`).then(r => r.json()),
-        ]);
-        setStats({ projects: p.length, leads: l.length, inquiries: i.length });
+        const [p, l, i, g] = await Promise.all([
+  fetch(`${BASE}/api/projects`).then(r => r.json()),
+  fetch(`${BASE}/api/visits`).then(r => r.json()),
+  fetch(`${BASE}/api/contacts`).then(r => r.json()),
+  fetch(`${BASE}/api/gallery`).then(r => r.json()),
+]);
+setStats({ projects: p.length, leads: l.length, inquiries: i.length, gallery: g.length });
       } catch (err) { console.error(err); }
     };
 
@@ -65,6 +66,7 @@ function AdminDashboard() {
     { to: "/admin/projects", icon: "🏗️", title: "Projects", description: "Add, edit and manage property listings", count: stats.projects, label: "total projects" },
     { to: "/admin/leads", icon: "📋", title: "Leads", description: "View Schedule Visit requests", count: stats.leads, label: "visit requests" },
     { to: "/admin/inquiries", icon: "✉️", title: "Inquiries", description: "View Contact form submissions", count: stats.inquiries, label: "inquiries" },
+    { to: "/admin/gallery", icon: "🖼️", title: "Gallery", description: "Upload and manage homepage gallery images", count: stats.gallery, label: "images" },
   ];
 
   return (

@@ -14,11 +14,11 @@ function About() {
       <div className="about-content">
         <p className="about-label">WHO WE ARE</p>
 
-        <h2>
-          Creating landmarks.
-          <br />
-          <span>Building trust.</span>
-        </h2>
+       <h2>
+  Where Innovation
+  <br />
+  <span>Meets Infrastructure.</span>
+</h2>
 
         <p className="about-desc">
           Dharukka Realiity creates premium residential spaces with thoughtful

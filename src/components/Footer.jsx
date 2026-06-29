@@ -19,11 +19,11 @@ function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <img className="footer-logo" src="/logo.png" alt="Dharukka Realiity" />
-          <h2>
-            Building landmarks. <span>Creating</span>
-            <br />
-            <span>legacies.</span>
-          </h2>
+         <h2>
+  Where Innovation <span>Meets</span>
+  <br />
+  <span>Infrastructure.</span>
+</h2>
           <div className="footer-socials">
             <a href="https://instagram.com" target="_blank" rel="noreferrer">◎</a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">in</a>
