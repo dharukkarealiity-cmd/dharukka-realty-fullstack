@@ -41,13 +41,22 @@ function AdminGallery() {
         { method: "POST", body: formData }
       );
       const cloudData = await cloudRes.json();
+      console.log("Cloudinary response:", cloudData);
+
+      if (!cloudData.secure_url) {
+        alert("Cloudinary error: " + JSON.stringify(cloudData));
+        return;
+      }
+
       const url = cloudData.secure_url;
 
-      await fetch(`${BASE}/api/gallery`, {
+      const backendRes = await fetch(`${BASE}/api/gallery`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url, caption }),
       });
+      const backendData = await backendRes.json();
+      console.log("Backend response:", backendData);
 
       setCaption("");
       setFile(null);
@@ -55,7 +64,8 @@ function AdminGallery() {
       fetchImages();
       alert("Image uploaded successfully!");
     } catch (err) {
-      alert("Upload failed. Please try again.");
+      console.error(err);
+      alert("Upload failed: " + err.message);
     } finally {
       setUploading(false);
     }
@@ -85,7 +95,6 @@ function AdminGallery() {
         <h1 className="admin-dashboard-title">Gallery</h1>
         <p className="admin-dashboard-subtitle">Upload and manage homepage gallery images.</p>
 
-        {/* Upload Section */}
         <div className="admin-dashboard-card" style={{ display: "block", cursor: "default", marginBottom: "2rem" }}>
           <h3 style={{ marginBottom: "1rem" }}>Upload New Image</h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", maxWidth: "500px" }}>
@@ -112,7 +121,6 @@ function AdminGallery() {
           </div>
         </div>
 
-        {/* Images Grid */}
         <h3 style={{ marginBottom: "1rem" }}>Uploaded Images ({images.length})</h3>
         {images.length === 0 ? (
           <p style={{ color: "#888" }}>No images uploaded yet.</p>
