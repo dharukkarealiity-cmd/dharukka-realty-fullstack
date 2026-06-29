@@ -7,7 +7,7 @@ function Stats() {
         <div className="stats-heading">
           <p>BY THE NUMBERS</p>
           <h2>
-            Twenty-six years.
+            
             <br />
             One uncompromising standard.
           </h2>

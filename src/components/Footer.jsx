@@ -48,7 +48,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <span>© 2026 Dharukka Realiity. All rights reserved.</span>
-        <span>RERA Registered · Privacy · Terms</span>
+       
       </div>
     </footer>
   );
