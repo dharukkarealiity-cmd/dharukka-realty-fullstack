@@ -5,13 +5,9 @@ function Stats() {
     <section className="stats-section">
       <div className="stats-inner">
         <div className="stats-heading">
-          <p>BY THE NUMBERS</p>
-          <h2>
-            
-            <br />
-            One uncompromising standard.
-          </h2>
-        </div>
+  <p>BY THE NUMBERS</p>
+  <h2>One uncompromising standard.</h2>
+</div>
 
         <div className="stats-grid">
           <div className="stat">
